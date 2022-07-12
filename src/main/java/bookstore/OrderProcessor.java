@@ -46,9 +46,7 @@ public class OrderProcessor {
             quantityString = quantityString.trim();
             int quantity = Integer.parseInt(quantityString);
 
-            int remainingQuantity = storeInventory.getQuantityForTitle(title);
-
-            if (remainingQuantity >= quantity) {
+            if (storeInventory.getQuantityForTitle(title) > 0) {
                 storeInventory.removeInventory(title, quantity);
             } else {
                 orderCompletelyFulfilled = false;
