@@ -12,7 +12,7 @@ Responsible for checking the current quantity of a particular title in our inven
 
 ### Instructions
 
-**Bug reports:** employees report that books out of stock, or maybe uncommon titles seem to cause errors. See if you can trace through the code and find the bug.
+**Bug reports:** employees report that books out of stock, or maybe uncommon titles, seem to cause errors. See if you can trace through the code and find the bug.
 
 Walk through the code together, screen sharing if your group finds that helpful to keep in sync.
 

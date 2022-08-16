@@ -9,37 +9,27 @@ public class InventoryEntry {
     private String title;
     private int quantity;
 
-    public InventoryEntry(String title) {
+    /**
+     * Create a new InventoryEntry with given title and quantity.
+     * @param title non-null, non-empty String with the book's title
+     * @param quantity how many of the book are in stock
+     */
+    public InventoryEntry(final String title, final int quantity) {
+        if (null == title || "".equals(title)) {
+            throw new IllegalArgumentException(String.format(
+                    "Cannot create an InventoryEntry with null/empty title: '%s'", title)
+            );
+        }
+
         this.title = title;
-        this.quantity = 0;
+        this.quantity = quantity;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public int getQuantity() {
         return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        InventoryEntry that = (InventoryEntry) o;
-        return Objects.equals(title, that.title);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(title);
     }
 }

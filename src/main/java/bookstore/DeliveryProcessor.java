@@ -44,27 +44,10 @@ public class DeliveryProcessor {
             int newQuantity = inventory.addInventory(title, quantity);
 
             System.out.println(
-                String.format(
-                    "Title: '%s', Quantity: %d", title, newQuantity
-                )
+                    String.format(
+                            "Title: '%s', Quantity: %d", title, newQuantity
+                    )
             );
         }
-    }
-
-    /**
-     * Adds the specified quantity of the specified title to inventory, creating a new entry
-     * if necessary.
-     *
-     * Throws an IllegalArgumentException if title is empty or null, or if quantity is negative
-     *
-     * Throws an IllegalStateException if there is no room in the inventory for another title.
-     *
-     * @param title The title of the book to add to inventory
-     * @param additionalQuantity The quantity to add into stock in inventory
-     * @return the current total quantity in stock for the specified title
-     */
-    public int addInventory(final String title, final int additionalQuantity) {
-        if (title == null)throw new IllegalArgumentException();
-        return 0;
     }
 }

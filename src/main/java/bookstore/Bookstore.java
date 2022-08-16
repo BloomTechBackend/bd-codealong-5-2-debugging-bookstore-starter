@@ -3,7 +3,7 @@ package bookstore;
 public class Bookstore {
     public static void main(String[] args) {
 
-//        checkInventory(); // Case 2
+        checkInventory(); // Case 2
         processOrder(); // Case 3
 
     }
