@@ -22,36 +22,37 @@ javadoc of key methods
 ----------------------
 
 OrderProcessor : processOrder():
-
-/\*\*
-\* Processes a book order, which may contain multiple lines. Makes best effort to fulfill
-\* the order, processing titles that are found and have sufficient copies in stock.
-\*
-\* Similar to deliveries, each delivered title is on its own line, with two fields
-\* (title, quantity), separated by "::".
-\* For example:
-\*
-\* Title A :: 1
-\* Title B: Subtitle::1
-\* A Very Long Title That Will Work Fine::10
-\*
-\* @param orderList String representation of the order, with one title/quantity pair per line
-\* @return {@code true} if the order was completely fulfillable
-\*/
+```
+/**
+* Processes a book order, which may contain multiple lines. Makes best effort to fulfill
+* the order, processing titles that are found and have sufficient copies in stock.
+*
+* Similar to deliveries, each delivered title is on its own line, with two fields
+* (title, quantity), separated by "::".
+* For example:
+*
+* Title A :: 1
+* Title B: Subtitle::1
+* A Very Long Title That Will Work Fine::10
+*
+* @param orderList String representation of the order, with one title/quantity pair per line
+* @return {@code true} if the order was completely fulfillable
+*/
 public boolean processOrder(final String orderList) { ...
 
 StoreInventory : removeInventory():
 
-/\*\*
-\* Removes the specified quantity from available inventory.
-\*
-\* Throws an IllegalArgumentException if:
-\*     \* quantity is negative
-\*     \* the specified title isn't in the inventory
-\*     \* the quantity is greater than the inventory available for that title
-\*
-\* @param title The title of the book to remove inventory for
-\* @param reducedQuantity The (positive) quantity to reduce the inventory quantity by
-\* @return the current total quantity in stock for the specified title
-\*/
+/**
+* Removes the specified quantity from available inventory.
+*
+* Throws an IllegalArgumentException if:
+*     \* quantity is negative
+*     \* the specified title isn't in the inventory
+*     \* the quantity is greater than the inventory available for that title
+*
+* @param title The title of the book to remove inventory for
+* @param reducedQuantity The (positive) quantity to reduce the inventory quantity by
+* @return the current total quantity in stock for the specified title
+*/
 public int removeInventory(final String title, final int reducedQuantity) { ...
+```
